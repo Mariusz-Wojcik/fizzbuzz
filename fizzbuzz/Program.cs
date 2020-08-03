@@ -8,15 +8,15 @@ namespace fizzbuzz
 {
     class Program
     {
-         static void Main(string[] args)
-         {
+        static void Main(string[] args)
+        {
             try
             {
-            Console.WriteLine("Podaj liczbę:");
-            var userNumber = GetData();
-            
-            var FizzBuzz = new FizzBuzz(userNumber);
-            FizzBuzz.ToString();
+                Console.WriteLine("Podaj liczbę:");
+                var userNumber = GetData();
+
+                var fizzBuzz = new FizzBuzz();
+                Console.WriteLine(fizzBuzz.GetOutput(userNumber));
             }
             catch (Exception ex)
             {

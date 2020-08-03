@@ -8,21 +8,24 @@ namespace fizzbuzz
 {
     class FizzBuzz
     {
-        public FizzBuzz(int a)
+        public string GetOutput(int a)
         {
+            var resultData = "";
+
             if (a % 3 == 0)
             {
                 if (a % 5 == 0)
-                    Console.WriteLine("FIZZBUZZ");
+                    resultData = "FIZZBUZZ";
                 else
-                    Console.WriteLine("FIZZ");
+                    resultData = "FIZZ";
             }
             else if (a % 5 == 0)
             {
-                Console.WriteLine("BUZZ");
+                resultData = "BUZZ";
             }
             else
-                Console.WriteLine(a);
+                resultData = $"{ a}";
+            return resultData;
         }
     }
 }
